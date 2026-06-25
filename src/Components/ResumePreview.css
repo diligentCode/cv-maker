@@ -1,0 +1,130 @@
+.a4-document-viewport {
+  width: 210mm;
+  min-height: 297mm;
+  background: #ffffff;
+  padding: 45px 50px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.doc-identity-header {
+  text-align: center;
+  margin-bottom: 14px;
+}
+.doc-identity-header h1 {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #0f172a;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.doc-contact-subrow {
+  font-size: 11px;
+  color: #475569;
+  margin-bottom: 4px;
+}
+.text-divider {
+  margin: 0 8px;
+  color: #cbd5e1;
+}
+.doc-links-subrow {
+  font-size: 11px;
+  font-weight: 500;
+}
+.doc-links-subrow a {
+  color: #2563eb;
+  text-decoration: none;
+}
+.doc-tagline-container {
+  border-top: 1px dashed #cbd5e1;
+  border-bottom: 1px dashed #cbd5e1;
+  padding: 8px 0;
+  margin: 10px 0;
+  text-align: center;
+}
+.doc-tagline-container h3 {
+  font-size: 11px;
+  font-weight: 700;
+  color: #1e293b;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+}
+.doc-tagline-container p {
+  font-size: 11px;
+  color: #475569;
+  line-height: 1.4;
+}
+.doc-section h2 {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #0f172a;
+  text-transform: uppercase;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  border-bottom: 2px solid #2563eb;
+  padding-bottom: 2px;
+}
+.skills-line-item {
+  margin-bottom: 4px;
+  font-size: 11px;
+  color: #1e293b;
+  line-height: 1.45;
+}
+.skills-line-item strong {
+  color: #0f172a;
+  font-weight: 600;
+}
+.doc-block-entry {
+  margin-top: 8px;
+}
+.doc-block-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 11.5px;
+  color: #0f172a;
+  margin-bottom: 2px;
+}
+.entry-right-metadata {
+  font-weight: 500;
+  font-size: 10.5px;
+}
+.timeline-date {
+  color: #0f172a;
+  font-weight: 700;
+}
+.blueprint-anchor {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+.doc-block-subheader {
+  font-size: 10.5px;
+  font-weight: 500;
+  color: #475569;
+  margin-bottom: 4px;
+  font-style: italic;
+}
+.doc-bullet-tree {
+  list-style-type: disc;
+  margin-left: 16px;
+}
+.doc-bullet-tree li {
+  font-size: 11px;
+  line-height: 1.45;
+  color: #334155;
+  margin-bottom: 2px;
+  text-align: justify;
+}
+@media print {
+  .a4-document-viewport {
+    box-shadow: none;
+    padding: 0px;
+    width: 100%;
+    min-height: auto;
+  }
+}

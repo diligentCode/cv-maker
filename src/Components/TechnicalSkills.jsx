@@ -15,9 +15,9 @@ export default function TechnicalSkills({ resumeData, setResumeData }) {
   const handleSkillChange = (id, field, value) => {
     setResumeData((prev) => ({
       ...prev,
-      skills: prev.skills.map((item) => {
-        item.id === id ? { ...item, [field]: value } : item;
-      }),
+      skills: prev.skills.map((item) =>
+        item.id === id ? { ...item, [field]: value } : item,
+      ),
     }));
   };
 

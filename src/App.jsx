@@ -3,6 +3,10 @@ import "./App.css";
 import PersonalDetails from "./Components/PersonalDetails";
 import ProfileTagline from "./Components/ProfileTagline";
 import TechnicalSkills from "./Components/TechnicalSkills";
+import ProjectsSection from "./Components/ProjectsSection";
+import EducationSection from "./Components/EducationSection";
+import AchievementsSection from "./Components/AchievementsSection";
+import ResumePreview from "./Components/ResumePreview";
 
 function App() {
   const [resumeData, setResumeData] = useState({
@@ -18,9 +22,9 @@ function App() {
       taglineDesc: "",
     },
     skills: [],
-    peojects: [],
+    projects: [],
     education: [],
-    acheievements: [],
+    achievements: [],
   });
 
   return (
@@ -32,7 +36,7 @@ function App() {
             Download PDF
           </button>
         </div>
-        <duv className="form-scroll-wrapper">
+        <div className="form-scroll-wrapper">
           <div className="form-stack">
             <PersonalDetails
               resumeData={resumeData}
@@ -46,11 +50,25 @@ function App() {
               resumeData={resumeData}
               setResumeData={setResumeData}
             />
+            <ProjectsSection
+              resumeData={resumeData}
+              setResumeData={setResumeData}
+            />
+            <EducationSection
+              resumeData={resumeData}
+              setResumeData={setResumeData}
+            />
+            <AchievementsSection
+              resumeData={resumeData}
+              setResumeData={setResumeData}
+            />
           </div>
-        </duv>
+        </div>
       </section>
 
-      <section className="preview-section"></section>
+      <section className="preview-section">
+        <ResumePreview resumeData={resumeData}></ResumePreview>
+      </section>
     </div>
   );
 }
