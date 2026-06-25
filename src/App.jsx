@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 import PersonalDetails from "./Components/PersonalDetails";
+import ProfileTagline from "./Components/ProfileTagline";
+import TechnicalSkills from "./Components/TechnicalSkills";
 
 function App() {
   const [resumeData, setResumeData] = useState({
@@ -36,6 +38,14 @@ function App() {
               resumeData={resumeData}
               setResumeData={setResumeData}
             ></PersonalDetails>
+            <ProfileTagline
+              resumeData={resumeData}
+              setResumeData={setResumeData}
+            />
+            <TechnicalSkills
+              resumeData={resumeData}
+              setResumeData={setResumeData}
+            />
           </div>
         </duv>
       </section>
