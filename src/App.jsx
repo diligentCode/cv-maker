@@ -1,13 +1,43 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "./assets/vite.svg";
-import heroImg from "./assets/hero.png";
 import "./App.css";
+// import PersonalDetails from "./Components/PersonalDetails";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [resumeData, setResumeData] = useState({
+    personal: {
+      name: "",
+      location: "",
+      email: "",
+      phone: "",
+      portfolio: "",
+      github: "",
+      linkedin: "",
+      taglineTitle: "",
+      taglineDesc: "",
+    },
+    skills: [],
+    peojects: [],
+    education: [],
+    acheievements: [],
+  });
 
-  return <></>;
+  return (
+    <div className="page-contaienr">
+      <section className="form-section hide-on-print">
+        <div className="form-header">
+          <h2>CV Builder</h2>
+          <button className="pdf" onClick={() => window.print}>
+            Download PDF
+          </button>
+        </div>
+        <duv className="form-scroll-wrapper">
+          <div className="form-stack"></div>
+        </duv>
+      </section>
+
+      <section className="preview-section"></section>
+    </div>
+  );
 }
 
 export default App;

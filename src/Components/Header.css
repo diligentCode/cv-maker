@@ -1,0 +1,310 @@
+/* --- Form Interactive Controls CSS --- */
+.forms-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-bottom: 40px;
+}
+
+.accordion-wrapper {
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background: #ffffff;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.accordion-trigger {
+  width: 100%;
+  padding: 16px;
+  background: #f8fafc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 13px;
+  color: #2d3748;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background 0.2s ease;
+}
+
+.accordion-trigger:hover {
+  background: #edf2f7;
+}
+
+.active-trigger {
+  background: #ebf8ff;
+  color: #2b6cb0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.arrow-icon {
+  font-size: 11px;
+  color: #a0aec0;
+}
+
+.accordion-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #ffffff;
+}
+
+/* Expansion class toggled smoothly via React */
+.accordion-panel.panel-expanded {
+  max-height: 1200px;
+}
+
+.accordion-inner-content {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input-row {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input-row label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #718096;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.input-row input,
+.input-row textarea {
+  padding: 10px;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #2d3748;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-row input:focus,
+.input-row textarea:focus {
+  border-color: #2b6cb0;
+  box-shadow: 0 0 0 1px #2b6cb0;
+}
+
+.grid-split-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.dynamic-repeater-card {
+  padding: 14px;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #2b6cb0;
+  background: #f8fafc;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 6px;
+}
+
+.card-header-row h5 {
+  font-size: 12px;
+  font-weight: 700;
+  color: #4a5568;
+}
+
+.delete-btn {
+  color: #e53e3e;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.delete-btn:hover {
+  text-decoration: underline;
+}
+
+.append-node-btn {
+  width: 100%;
+  padding: 12px;
+  text-align: center;
+  border: 1px dashed #2b6cb0;
+  color: #2b6cb0;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 4px;
+  background: #fff;
+  transition: background 0.2s;
+}
+
+.append-node-btn:hover {
+  background: #ebf8ff;
+}
+
+/* --- Direct A4 Document Viewport Styling Mirroring Reference Target[cite: 8] --- */
+.a4-document-viewport {
+  width: 210mm;
+  min-height: 297mm;
+  background: #ffffff;
+  padding: 45px 50px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.doc-identity-header {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.doc-identity-header h1 {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #1a2530;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.doc-contact-subrow {
+  font-size: 11px;
+  color: #555555;
+  margin-bottom: 6px;
+}
+
+.text-divider {
+  margin: 0 7px;
+  color: #cccccc;
+  font-weight: 400;
+}
+
+.doc-links-subrow {
+  font-size: 11px;
+  color: #2b6cb0;
+  font-weight: 500;
+}
+
+.doc-links-subrow a {
+  color: #2b6cb0;
+  text-decoration: none;
+}
+
+.doc-tagline-container {
+  border-top: 1px dashed #cbd5e0;
+  border-bottom: 1px dashed #cbd5e0;
+  padding: 8px 0;
+  margin: 12px 0;
+  text-align: center;
+}
+
+.doc-tagline-container h3 {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #2d3748;
+  letter-spacing: 0.5px;
+  margin-bottom: 3px;
+  text-transform: uppercase;
+}
+
+.doc-tagline-container p {
+  font-size: 11px;
+  color: #4a5568;
+  line-height: 1.4;
+}
+
+.doc-section h2 {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #1a2530;
+  text-transform: uppercase;
+  margin-top: 18px;
+  margin-bottom: 8px;
+  border-bottom: 2px solid #2b6cb0;
+  padding-bottom: 3px;
+}
+
+.skills-line-item {
+  margin-bottom: 4px;
+  font-size: 11px;
+  color: #2d3748;
+  line-height: 1.45;
+}
+
+.skills-line-item strong {
+  color: #1a2530;
+  font-weight: 600;
+}
+
+.doc-block-entry {
+  margin-top: 10px;
+}
+
+.doc-block-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 11.5px;
+  color: #1a2530;
+  margin-bottom: 2px;
+}
+
+.entry-right-metadata {
+  font-weight: 500;
+  font-size: 10.5px;
+}
+
+.timeline-date {
+  color: #1a2530;
+  font-weight: 700;
+}
+
+.blueprint-anchor {
+  color: #2b6cb0;
+  text-decoration: none;
+}
+
+.doc-block-subheader {
+  font-size: 10.5px;
+  font-weight: 500;
+  color: #4a5568;
+  margin-bottom: 4px;
+  font-style: italic;
+}
+
+.doc-bullet-tree {
+  list-style-type: disc;
+  margin-left: 16px;
+}
+
+.doc-bullet-tree li {
+  font-size: 11px;
+  line-height: 1.45;
+  color: #2d3748;
+  margin-bottom: 3px;
+  text-align: justify;
+}
+
+/* Print Overrides to lock strict dimension output limits[cite: 8] */
+@media print {
+  .a4-document-viewport {
+    box-shadow: none;
+    padding: 0px;
+    width: 100%;
+    min-height: auto;
+  }
+}
