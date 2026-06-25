@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-// import PersonalDetails from "./Components/PersonalDetails";
+import PersonalDetails from "./Components/PersonalDetails";
 
 function App() {
   const [resumeData, setResumeData] = useState({
@@ -26,12 +26,17 @@ function App() {
       <section className="form-section hide-on-print">
         <div className="form-header">
           <h2>CV Builder</h2>
-          <button className="pdf" onClick={() => window.print}>
+          <button className="pdf" onClick={() => window.print()}>
             Download PDF
           </button>
         </div>
         <duv className="form-scroll-wrapper">
-          <div className="form-stack"></div>
+          <div className="form-stack">
+            <PersonalDetails
+              resumeData={resumeData}
+              setResumeData={setResumeData}
+            ></PersonalDetails>
+          </div>
         </duv>
       </section>
 
